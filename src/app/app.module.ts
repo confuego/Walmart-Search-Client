@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { AppComponent } from './app.component';
+import { SearchModule } from './search';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { AppComponent } from './app.component';
   imports: [
     ReactiveFormsModule,
     MatInputModule,
-    BrowserModule
+    BrowserModule,
+    SearchModule
   ],
   providers: [],
   bootstrap: [AppComponent]

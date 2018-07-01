@@ -123,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "walmart-search-client"
+  "defaultProject": "walmart-search-client",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
