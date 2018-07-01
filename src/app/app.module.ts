@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { AppComponent } from './app.component';
-import { SearchModule } from './shared';
-import { CoreModule } from './core/core.module';
+import { CoreModule } from './core';
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
     CoreModule,
     MatInputModule,
     BrowserModule,
-    SearchModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
