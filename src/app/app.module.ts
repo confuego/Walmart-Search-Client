@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { AppComponent } from './app.component';
-import { SearchModule } from './search';
+import { SearchModule } from './shared';
+import { CoreModule } from './core/core.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -11,6 +13,8 @@ import { SearchModule } from './search';
   ],
   imports: [
     ReactiveFormsModule,
+    AppRoutingModule,
+    CoreModule,
     MatInputModule,
     BrowserModule,
     SearchModule
