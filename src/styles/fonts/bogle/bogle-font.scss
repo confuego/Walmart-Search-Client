@@ -56,3 +56,19 @@ $baseUrl: '/assets/fonts/bogle/BogleWeb-';
     url($baseUrl + 'BlackItalic.woff2') format('woff2'),
     url($baseUrl + 'BlackItalic.ttf') format('truetype');
 }
+
+$font-sm: 15px;
+$font-med: 25px;
+$font-lg: 48px;
+
+.font-sm {
+  font-size: $font-sm;
+}
+
+.font-med {
+  font-size: $font-med;
+}
+
+.font-lg {
+  font-size: $font-lg;
+}

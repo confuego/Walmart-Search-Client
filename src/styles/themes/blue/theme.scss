@@ -1,0 +1,8 @@
+@import '~@angular/material/theming';
+@import 'colors';
+
+@include mat-core();
+
+$app-theme: mat-light-theme(mat-palette($app-blue-palette), mat-palette($app-white-palette));
+
+@include angular-material-theme($app-theme);
