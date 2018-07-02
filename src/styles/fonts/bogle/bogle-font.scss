@@ -1,7 +1,8 @@
 $baseUrl: '/assets/fonts/bogle/BogleWeb-';
 
 @font-face {
-  font-family: Bogle-Regular;
+  font-weight: 400;
+  font-family: Bogle;
   src: url($baseUrl + 'Regular.eot');
   src: url($baseUrl + 'Regular.eot') format('embedded-opentype'),
     url($baseUrl + 'Regular.woff') format('woff'),
@@ -10,8 +11,9 @@ $baseUrl: '/assets/fonts/bogle/BogleWeb-';
 }
 
 @font-face {
+  font-weight: 400;
   font-style: italic;
-  font-family: Bogle-Regular;
+  font-family: Bogle;
   src: url($baseUrl + 'RegularItalic.eot');
   src: url($baseUrl + 'RegularItalic.eot') format('embedded-opentype'),
     url($baseUrl + 'RegularItalic.woff') format('woff'),
@@ -20,7 +22,8 @@ $baseUrl: '/assets/fonts/bogle/BogleWeb-';
 }
 
 @font-face {
-  font-family: Bogle-Bold;
+  font-weight: 700;
+  font-family: Bogle;
   src: url($baseUrl + 'Bold.eot');
   src: url($baseUrl + 'Bold.eot') format('embedded-opentype'),
     url($baseUrl + 'Bold.woff') format('woff'),
@@ -29,8 +32,9 @@ $baseUrl: '/assets/fonts/bogle/BogleWeb-';
 }
 
 @font-face {
+  font-weight: 700;
   font-style: italic;
-  font-family: Bogle-Bold;
+  font-family: Bogle;
   src: url($baseUrl + 'BoldItalic.eot');
   src: url($baseUrl + 'BoldItalic.eot') format('embedded-opentype'),
     url($baseUrl + 'BoldItalic.woff') format('woff'),
@@ -39,7 +43,8 @@ $baseUrl: '/assets/fonts/bogle/BogleWeb-';
 }
 
 @font-face {
-  font-family: Bogle-Black;
+  font-weight: 800;
+  font-family: Bogle;
   src: url($baseUrl + 'Black.eot');
   src: url($baseUrl + 'Black.eot') format('embedded-opentype'),
     url($baseUrl + 'Black.woff') format('woff'),
@@ -49,7 +54,8 @@ $baseUrl: '/assets/fonts/bogle/BogleWeb-';
 
 @font-face {
   font-style: italic;
-  font-family: Bogle-Black;
+  font-weight: 800;
+  font-family: Bogle;
   src: url($baseUrl + 'BlackItalic.eot');
   src: url($baseUrl + 'BlackItalic.eot') format('embedded-opentype'),
     url($baseUrl + 'BlackItalic.woff') format('woff'),
@@ -61,14 +67,14 @@ $font-sm: 15px;
 $font-med: 25px;
 $font-lg: 48px;
 
-.font-sm {
+.font--sm {
   font-size: $font-sm;
 }
 
-.font-med {
+.font--med {
   font-size: $font-med;
 }
 
-.font-lg {
+.font--lg {
   font-size: $font-lg;
 }
