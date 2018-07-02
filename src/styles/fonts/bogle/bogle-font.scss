@@ -1,0 +1,58 @@
+$baseUrl: '/assets/fonts/bogle/BogleWeb-';
+
+@font-face {
+  font-family: Bogle-Regular;
+  src: url($baseUrl + 'Regular.eot');
+  src: url($baseUrl + 'Regular.eot') format('embedded-opentype'),
+    url($baseUrl + 'Regular.woff') format('woff'),
+    url($baseUrl + 'Regular.woff2') format('woff2'),
+    url($baseUrl + 'Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-style: italic;
+  font-family: Bogle-Regular;
+  src: url($baseUrl + 'RegularItalic.eot');
+  src: url($baseUrl + 'RegularItalic.eot') format('embedded-opentype'),
+    url($baseUrl + 'RegularItalic.woff') format('woff'),
+    url($baseUrl + 'RegularItalic.woff2') format('woff2'),
+    url($baseUrl + 'RegularItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Bogle-Bold;
+  src: url($baseUrl + 'Bold.eot');
+  src: url($baseUrl + 'Bold.eot') format('embedded-opentype'),
+    url($baseUrl + 'Bold.woff') format('woff'),
+    url($baseUrl + 'Bold.woff2') format('woff2'),
+    url($baseUrl + 'Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-style: italic;
+  font-family: Bogle-Bold;
+  src: url($baseUrl + 'BoldItalic.eot');
+  src: url($baseUrl + 'BoldItalic.eot') format('embedded-opentype'),
+    url($baseUrl + 'BoldItalic.woff') format('woff'),
+    url($baseUrl + 'BoldItalic.woff2') format('woff2'),
+    url($baseUrl + 'BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Bogle-Black;
+  src: url($baseUrl + 'Black.eot');
+  src: url($baseUrl + 'Black.eot') format('embedded-opentype'),
+    url($baseUrl + 'Black.woff') format('woff'),
+    url($baseUrl + 'Black.woff2') format('woff2'),
+    url($baseUrl + 'Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-style: italic;
+  font-family: Bogle-Black;
+  src: url($baseUrl + 'BlackItalic.eot');
+  src: url($baseUrl + 'BlackItalic.eot') format('embedded-opentype'),
+    url($baseUrl + 'BlackItalic.woff') format('woff'),
+    url($baseUrl + 'BlackItalic.woff2') format('woff2'),
+    url($baseUrl + 'BlackItalic.ttf') format('truetype');
+}
