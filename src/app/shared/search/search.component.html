@@ -1,3 +1,22 @@
-<p>
-  search works!
-</p>
+<div
+  class="search"
+  appearance="fill">
+  <mat-icon
+    color="secondary"
+    matPrefix>
+  search
+  </mat-icon>
+  <input
+    matInput
+    type="search"
+    [formControl]="searchControl"
+    [placeholder]="placeholder">
+  <button
+    mat-button
+    matSuffix
+    mat-icon-button
+    aria-label="Clear"
+    (click)="searchControl.setValue(undefined, { emitEvent: false })">
+    <mat-icon class="gc-icon--16">close</mat-icon>
+  </button>
+</div>

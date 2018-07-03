@@ -5,13 +5,15 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SearchModule } from '../search';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     MatToolbarModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SearchModule
   ],
   declarations: [HeaderComponent, FooterComponent],
   exports: [HeaderComponent, FooterComponent]
