@@ -1,7 +1,13 @@
 @import 'styles/fonts/bogle/bogle-font';
 @import 'styles/themes/blue/theme';
 
+html, body {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   font-family: Bogle;
   font-weight: 400;
   font-size: $font-sm;
