@@ -3,8 +3,7 @@ import { FormControl } from '@angular/forms';
 import { debounceTime, map } from 'rxjs/operators';
 import { ProductsService } from '../../../core/services/products.service';
 import { Observable } from 'rxjs';
-import { Product } from '../../../core/models/product';
-import { ObservableProduct } from '../../layout/product-search/observable-product';
+import { Product, ObservableProduct } from '../../../core';
 
 @Component({
   selector: 'app-header',

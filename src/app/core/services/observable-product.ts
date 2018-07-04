@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Product } from '../../../core';
+import { Product } from '../models';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class ObservableProduct extends BehaviorSubject<Product | undefined> {
   }
 
   next(product: Product): void {
-    if (!product || product.itemId === this.value.itemId) {
+    if (!product || this.value && product.itemId === this.value.itemId) {
       return;
     }
     super.next(product);

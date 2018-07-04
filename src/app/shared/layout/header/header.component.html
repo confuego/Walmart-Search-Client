@@ -12,7 +12,7 @@
 </mat-toolbar>
 
 <mat-autocomplete #auto="matAutocomplete">
-  <mat-option class="header__autocomplete" *ngFor="let product of products$ | async" [value]="product.name">
-    <app-product-search (click)="searchSubject.next(product)" [product]="product"></app-product-search>
+  <mat-option class="header__autocomplete" *ngFor="let product of products$ | async" (onSelectionChange)="searchSubject.next(product)" [value]="product.name">
+    <app-product-search [product]="product"></app-product-search>
   </mat-option>
 </mat-autocomplete>
