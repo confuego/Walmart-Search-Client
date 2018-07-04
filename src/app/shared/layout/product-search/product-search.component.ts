@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from '../../../core';
 
 @Component({
@@ -6,13 +6,6 @@ import { Product } from '../../../core';
   templateUrl: './product-search.component.html',
   styleUrls: ['./product-search.component.scss']
 })
-export class ProductSearchComponent implements OnInit {
-
+export class ProductSearchComponent {
   @Input() product: Product;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

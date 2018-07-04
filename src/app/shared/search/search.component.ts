@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, AfterContentInit } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, AfterContentInit, Output, EventEmitter } from '@angular/core';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { ControlValueAccessor, FormBuilder, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatAutocomplete, MatAutocompleteTrigger } from '@angular/material/autocomplete';
@@ -26,7 +26,14 @@ export class SearchComponent implements ControlValueAccessor, OnInit, AfterConte
   @Input()
   public autocomplete: MatAutocomplete;
 
+  @Output() clear = new EventEmitter<void>();
+
   @ViewChild('searchInput') searchInput: MatAutocompleteTrigger;
+
+  public onClear(): void {
+    this.searchControl.setValue(undefined, { emitEvent: false });
+    this.clear.emit();
+  }
 
   public writeValue(obj: string): void {
     this.value = obj;
@@ -52,9 +59,11 @@ export class SearchComponent implements ControlValueAccessor, OnInit, AfterConte
       .subscribe((searchText: string) => {
         this.writeValue(searchText);
 
-        if (this.onChange && this.onTouch) {
+        if (this.value && this.value !== '') {
           this.onChange(this.value);
           this.onTouch(this.value);
+        } else {
+          this.clear.emit();
         }
       });
   }

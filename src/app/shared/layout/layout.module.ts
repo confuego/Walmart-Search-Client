@@ -9,6 +9,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SearchModule } from '../search';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProductSearchComponent } from './product-search/product-search.component';
+import { ObservableProduct } from './product-search/observable-product';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -20,6 +22,7 @@ import { ProductSearchComponent } from './product-search/product-search.componen
     MatCardModule
   ],
   declarations: [HeaderComponent, FooterComponent, ProductSearchComponent],
-  exports: [HeaderComponent, FooterComponent, ProductSearchComponent]
+  exports: [HeaderComponent, FooterComponent, ProductSearchComponent],
+  providers: [ObservableProduct]
 })
 export class LayoutModule { }
