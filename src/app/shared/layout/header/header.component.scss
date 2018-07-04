@@ -18,6 +18,12 @@
     padding-top: 20px;
   }
 
+  &__autocomplete {
+    display: inline;
+    line-height: normal;
+    white-space: normal;
+  }
+
   &__title {
     margin-left: 17px;
     letter-spacing: 1px;

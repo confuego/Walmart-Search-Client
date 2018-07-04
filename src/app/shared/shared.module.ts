@@ -9,7 +9,6 @@ import { LayoutModule } from './layout';
     SearchModule,
     LayoutModule
   ],
-  declarations: [],
   exports: [SearchModule, LayoutModule]
 })
 export class SharedModule { }
