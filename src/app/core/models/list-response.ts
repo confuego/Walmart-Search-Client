@@ -1,4 +1,4 @@
-export interface Query<T> {
+export interface ListResponse<T> {
   query: string;
   sort: string;
   responseGroup: string;

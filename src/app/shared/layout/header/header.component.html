@@ -12,5 +12,5 @@
 </mat-toolbar>
 
 <mat-autocomplete #auto="matAutocomplete">
-  <mat-option *ngFor="let v of data" [value]="v.description">{{ v.description }}</mat-option>
+  <mat-option *ngFor="let product of products$ | async" [value]="product.name">{{ product.name }}</mat-option>
 </mat-autocomplete>
