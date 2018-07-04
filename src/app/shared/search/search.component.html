@@ -1,22 +1,32 @@
-<div
-  class="search"
-  appearance="fill">
-  <mat-icon
-    color="secondary"
-    matPrefix>
-  search
-  </mat-icon>
-  <input
-    matInput
-    type="search"
-    [formControl]="searchControl"
-    [placeholder]="placeholder">
-  <button
-    mat-button
-    matSuffix
-    mat-icon-button
-    aria-label="Clear"
-    (click)="searchControl.setValue(undefined, { emitEvent: false })">
-    <mat-icon class="gc-icon--16">close</mat-icon>
-  </button>
-</div>
+<mat-form-field
+    appearance="fill"
+    [style.width.px]="width"
+>
+    <button
+        matPrefix
+        mat-icon-button
+        aria-label="Search"
+        color="secondary"
+    >
+        <mat-icon color="secondary">search</mat-icon>
+    </button>
+    <input
+        #searchInput
+        matInput
+        [matAutocomplete]="autocomplete"
+        type="text"
+        [formControl]="searchControl"
+        [placeholder]="placeholder"
+    >
+    <button
+        mat-button
+        *ngIf="searchControl.value"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        color="secondary"
+        (click)="searchControl.setValue(undefined, { emitEvent: false })"
+    >
+        <mat-icon>close</mat-icon>
+    </button>
+</mat-form-field>

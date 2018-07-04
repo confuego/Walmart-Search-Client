@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { debounceTime } from 'rxjs/operators';
+import { ProductsService } from '../../../core/services/products.service';
+import { Observable } from 'rxjs';
+import { Product } from '../../../core/models/product';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +11,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  public siteSearch = new FormControl('');
+  public products$: Observable<Array<Product>>;
 
-  constructor() { }
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit() {
+    this.siteSearch
+      .valueChanges
+      .pipe(debounceTime(400))
+      .subscribe((search: string) => {
+        this.products$ = this.productsService.get(search);
+        this.products$.subscribe(() => {
+          console.log('Test');
+        });
+      });
   }
 
 }
