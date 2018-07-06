@@ -11,7 +11,6 @@ import { InterceptorsModule } from './interceptors/interceptors.module';
     ServicesModule,
     InterceptorsModule
   ],
-  declarations: [],
   exports: [ModelsModule, ServicesModule, InterceptorsModule]
 })
 export class CoreModule { }

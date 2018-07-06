@@ -19,8 +19,7 @@ import { SharedModule } from './shared';
     CoreModule,
     MatInputModule,
     BrowserAnimationsModule,
-    SharedModule,
-    FlexLayoutModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

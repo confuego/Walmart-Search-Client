@@ -1,1 +1,35 @@
-<app-product-search *ngIf="product$ | async as product" [product]="product"></app-product-search>
+<h1>Products</h1>
+
+<ng-container *ngIf="product$ | async as product">
+    <div
+        fxFlex
+        fxLayoutAlign="start"
+        class="product"
+    >
+        <mat-card class="product__card mat-elevation-z0">
+            <mat-card-header>
+                <img
+                    mat-card-avatar
+                    src="{{ product.thumbnailImage }}"
+                >
+                <mat-card-title>{{ product.name }}</mat-card-title>
+                <mat-card-subtitle>{{ product.categoryPath }}</mat-card-subtitle>
+            </mat-card-header>
+            <img
+                mat-card-image
+                src="{{ product.largeImage }}"
+                alt="Image of {{ product.name }}"
+            >
+        </mat-card>
+        <div class="product__description">
+            <h2>Description</h2>
+            <p [innerHtml]="product.longDescription | safeHtml"></p>
+        </div>
+        <div class="product__recommendations" *ngIf="recommendations$ | async as recommendations">
+          <app-product-search
+            *ngFor="let recommendation of recommendations"
+            [product]="recommendation">
+          </app-product-search>
+        </div>
+    </div>
+</ng-container>

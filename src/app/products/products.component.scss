@@ -1,0 +1,15 @@
+.mat-card-image {
+  width: inherit;
+  margin: inherit;
+}
+
+.product {
+  font-family: Bogle;
+
+  &__card {
+  }
+
+  &__description {
+    margin-left: 20px;
+  }
+}
