@@ -1,20 +1,19 @@
 version: 2
 jobs:
   build-angular:
-    build:
-      docker:
-        - image: circleci/node:latest-browsers
+    docker:
+      - image: circleci/node:latest-browsers
 
-      working_directory: ~/repo
+    working_directory: ~/repo
 
-      steps:
-        - checkout
-        - run:
-          name: Install Dependencies
-          command: rm -rf node_modules && npm install
-        - run:
-          name: Run Unit Tests
-          command: ng test --watch=false
-        - run:
-          name: Build
-          command: ng build --prod
+    steps:
+      - checkout
+      - run:
+        name: Install Dependencies
+        command: rm -rf node_modules && npm install
+      - run:
+        name: Run Unit Tests
+        command: ng test --watch=false
+      - run:
+        name: Build
+        command: ng build --prod
