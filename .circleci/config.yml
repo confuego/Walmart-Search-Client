@@ -18,4 +18,4 @@ jobs:
           command: npm run test:ci
       - run:
           name: Build
-          command: npm run ng build --prod --aot --progress=false
+          command: npm run build:ci
