@@ -16,7 +16,7 @@ import { MatAutocomplete, MatAutocompleteTrigger } from '@angular/material/autoc
 export class SearchComponent implements ControlValueAccessor, OnInit, AfterContentInit {
   private onChange: (value: string) => void;
   private onTouch: (value: string) => void;
-  private searchControl: FormControl = this.formBuilder.control({ value: undefined });
+  public searchControl: FormControl = this.formBuilder.control({ value: undefined });
 
   public value: string;
   public disabled: boolean;
