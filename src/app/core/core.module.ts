@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ModelsModule } from './models/models.module';
-import { ServicesModule } from './services/services.module';
-import { InterceptorsModule } from './interceptors/interceptors.module';
+import { ServicesModule } from './services';
 
 @NgModule({
   imports: [
     CommonModule,
-    ModelsModule,
-    ServicesModule,
-    InterceptorsModule
+    ServicesModule
   ],
-  exports: [ModelsModule, ServicesModule, InterceptorsModule]
+  exports: [ServicesModule]
 })
 export class CoreModule { }

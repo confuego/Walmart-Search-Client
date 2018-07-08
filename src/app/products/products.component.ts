@@ -1,7 +1,7 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { ObservableProduct, ProductsService, Product } from '../core';
-import { ProductSearchComponent } from '../shared/layout/product-search/product-search.component';
+import { Component } from '@angular/core';
+import { ObservableProduct, ProductsService, Product, ObservableError } from '../core';
 import { Observable } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-products',
@@ -10,13 +10,13 @@ import { Observable } from 'rxjs';
 })
 export class ProductsComponent {
 
-  public recommendations$: Observable<Product>;
+  public recommendations$: Observable<Array<Product>>;
 
-  constructor(public product$: ObservableProduct, public productsService: ProductsService) {
-    this.product$.subscribe(product => {
-      if (product) {
-        this.recommendations$ = this.productsService.recommendations(product);
-      }
+  constructor(public product$: ObservableProduct,
+      public productsService: ProductsService) {
+
+    this.product$.pipe(debounceTime(100)).subscribe(product => {
+      this.recommendations$ = this.productsService.recommendations(product);
     });
   }
 }
