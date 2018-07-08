@@ -11,25 +11,12 @@ jobs:
 
     steps:
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package.lock" }}
-
       - run:
-          name: npm-install
-          command: npm install --no-progress --pure-lockfile
-
-      - save_cache:
-          key: dependency-cache-{{ checksum "package.lock" }}
-          paths:
-            - ~/.cache/npm
-            - ./node_modules
-
+        name: npm-install
+        command: npm install
       - run:
         name: Run Unit Tests
         command: ng test --watch=false
-
       - run:
         name: Build
         command: ng build --prod --aot --progress=false
