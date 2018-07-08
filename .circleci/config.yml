@@ -15,12 +15,6 @@ jobs:
 
     steps:
       - checkout
-      - run:
-        name: Display Versions
-        command: |
-          node --version
-          npm --version
-          yarn --version
 
       # Download and cache dependencies
       - restore_cache:
@@ -37,7 +31,7 @@ jobs:
             - ./node_modules
       - run:
         name: Run Unit Tests
-        command: yarn run ng test --watch=false
+        command: ng test --watch=false
       - run:
         name: Build
-        command: yarn run ng build --prod --aot --progress=false
+        command: ng build --prod --aot --progress=false
