@@ -37,7 +37,7 @@ jobs:
             - ./node_modules
       - run:
         name: Run Unit Tests
-        command: ng test --watch=false
+        command: yarn run ng test --watch=false
       - run:
         name: Build
-        command: ng build --prod --aot --progress=false
+        command: yarn run ng build --prod --aot --progress=false
