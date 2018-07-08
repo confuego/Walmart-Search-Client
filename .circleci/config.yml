@@ -1,7 +1,3 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   build:
@@ -18,20 +14,22 @@ jobs:
 
       # Download and cache dependencies
       - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: dependency-cache-{{ checksum "package.lock" }}
 
       - run:
-          name: yarn-install
-          command: yarn --no-progress --pure-lockfile
+          name: npm-install
+          command: npm install --no-progress --pure-lockfile
 
       - save_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: dependency-cache-{{ checksum "package.lock" }}
           paths:
-            - ~/.cache/yarn
+            - ~/.cache/npm
             - ./node_modules
+
       - run:
         name: Run Unit Tests
         command: ng test --watch=false
+
       - run:
         name: Build
         command: ng build --prod --aot --progress=false
