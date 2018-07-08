@@ -1,0 +1,19 @@
+@import '~@angular/material/theming';
+@import './variables';
+
+$app-typography: mat-typography-config(
+  $font-family: "Bogle",
+  $display-4: mat-typography-level(112px, 112px, 200),
+  $display-3: mat-typography-level(56px, 56px, 400),
+  $display-2: mat-typography-level(45px, 48px, 400),
+  $display-1: mat-typography-level(34px, 40px, 400),
+  $headline: mat-typography-level(22px, 32px, 300),
+  $title: mat-typography-level(18px, 32px, 500),
+  $subheading-2: mat-typography-level(16px, 28px, 400),
+  $subheading-1: mat-typography-level(15px, 24px, 400),
+  $body-2: mat-typography-level($font-size-base, 24px, 500, null, $letter-spacing-base),
+  $body-1: mat-typography-level($font-size-base, 24px, 200, null, $letter-spacing-base),
+  $caption: mat-typography-level($font-size-small, 20px, 500, null, $letter-spacing-base),
+  $button: mat-typography-level(12px, 12px, 700),
+  $input: mat-typography-level($font-size-base, 1.325, 400, null, $letter-spacing-base)
+);

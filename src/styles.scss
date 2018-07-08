@@ -1,14 +1,13 @@
-@import 'styles/fonts/bogle/bogle-font';
 @import 'styles/themes/blue/theme';
+@import 'styles/typography';
+
+@include mat-core($app-typography);
 
 html, body {
   height: 100%;
 }
 
 body {
-  font-family: Bogle;
-  font-weight: 400;
-  font-size: $font-sm;
   margin: 0;
 }
 
