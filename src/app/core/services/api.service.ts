@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export abstract class ApiService {
+export class ApiService {
 
   public get<T>(url: string, params: HttpParams | { [key: string]: string }): Observable<T> {
     return this.http.get(url, { params }) as Observable<T>;

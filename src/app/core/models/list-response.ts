@@ -3,7 +3,7 @@ export interface ListResponse<T> {
   sort: string;
   responseGroup: string;
   totalResults: number;
-  start: 1;
+  start: number;
   numItems: number;
   items: Array<T>;
 }

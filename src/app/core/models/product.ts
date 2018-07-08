@@ -2,6 +2,11 @@ import { GiftOptions } from './gift-optiions';
 import { ImageEntity } from './image-entity';
 
 export class Product {
+
+  constructor(data: Partial<Product>) {
+    Object.assign(this, data);
+  }
+
   itemId: number;
   parentItemId: number;
   name: string;
