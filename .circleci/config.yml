@@ -15,7 +15,7 @@ jobs:
           command: npm install
       - run:
           name: Run Unit Tests
-          command: npm run ng test --watch=false
+          command: npm run test:ci
       - run:
           name: Build
           command: npm run ng build --prod --aot --progress=false
