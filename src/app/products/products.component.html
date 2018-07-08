@@ -23,7 +23,7 @@
         </mat-card>
         <div class="product__description">
             <h2>Description</h2>
-            <p [innerHtml]="product.longDescription | safeHtml"></p>
+            <p [innerHTML]="product.longDescription"></p>
         </div>
         <div class="product__recommendations" *ngIf="recommendations$ | async as recommendations">
           <app-product-search
