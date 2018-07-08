@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  env: {
+    name: 'DEV'
+  },
+  productsApi: {
+    key: '45jbeqz8wca6h5yqvp43cxgh',
+    baseUrl: 'http://api.walmartlabs.com/v1'
+  }
 };
 
 /*
