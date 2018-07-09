@@ -3,16 +3,6 @@
 .header {
   min-height: 100px;
 
-  &__link {
-    text-decoration: none;
-    font-family: Bogle;
-    font-weight: 800;
-    text-transform: capitalize;
-    color: $app-white;
-    margin-left: 15px;
-    line-height: 1;
-  }
-
   &__search {
     margin-left: 50px;
     padding-top: 20px;
