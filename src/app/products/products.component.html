@@ -26,10 +26,10 @@
             <p [innerHTML]="product.longDescription"></p>
         </div>
         <div class="product__recommendations" *ngIf="recommendations$ | async as recommendations">
-          <app-product-search
+          <app-product-card
             *ngFor="let recommendation of recommendations"
             [product]="recommendation">
-          </app-product-search>
+          </app-product-card>
         </div>
     </div>
 </ng-container>

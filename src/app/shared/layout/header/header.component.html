@@ -12,6 +12,6 @@
 
 <mat-autocomplete #auto="matAutocomplete">
   <mat-option class="header__autocomplete" *ngFor="let product of products$ | async" (onSelectionChange)="searchSubject.next(product)" [value]="product.name">
-    <app-product-search [product]="product"></app-product-search>
+    <app-product-card [product]="product"></app-product-card>
   </mat-option>
 </mat-autocomplete>

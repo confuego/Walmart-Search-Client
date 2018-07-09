@@ -7,7 +7,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { SearchModule } from '../search';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProductSearchComponent } from './product-search/product-search.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import { PipesModule } from '../../core';
 
 @NgModule({
   imports: [
@@ -16,9 +17,10 @@ import { ProductSearchComponent } from './product-search/product-search.componen
     MatToolbarModule,
     ReactiveFormsModule,
     SearchModule,
-    MatCardModule
+    MatCardModule,
+    PipesModule
   ],
-  declarations: [HeaderComponent, FooterComponent, ProductSearchComponent],
-  exports: [HeaderComponent, FooterComponent, ProductSearchComponent]
+  declarations: [HeaderComponent, FooterComponent, ProductCardComponent],
+  exports: [HeaderComponent, FooterComponent, ProductCardComponent]
 })
 export class LayoutModule { }
