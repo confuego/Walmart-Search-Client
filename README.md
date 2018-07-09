@@ -4,8 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Initialization
 
-Run `npm i` to install all the dependencies for the project.
-Install the 'Allow-Control-Allow-Origin: *' Chrome extension to prevent CORS issues when connecting to thw API from locahost.
+- Run `npm i` to install all the dependencies for the project.
+- Install the 'Allow-Control-Allow-Origin: *' Chrome extension to prevent CORS issues when connecting to thw API from locahost.
 
 ## Development server
 
